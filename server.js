@@ -11,7 +11,10 @@ app.use(express.json());
 
 // Routes import
 const userRoutes = require("././routes/userRoutes");
+const bridgeRoutes = require("./routes/bridge");
+
 app.use("/api", userRoutes);
+app.use("/api", bridgeRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
