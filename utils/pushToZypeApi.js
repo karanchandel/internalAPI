@@ -15,7 +15,7 @@ async function pushUserToZype(data) {
     state: data.state || "",
     gender: data.gender?.toLowerCase() || "",
     city: data.city || "",
-    dob: data.dob ? data.dob.toISOString().split("T")[0] : "",
+    dob: data.dob || "",
     creditScore: data.creditScore != null ? Number(data.creditScore) : 710, // default
     SalaryType: data.salaryType || "",
     CompanyName: data.companyName || "",
